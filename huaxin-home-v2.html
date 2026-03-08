@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>樺芯苑｜都會高壓族的大腦離線空間・頌缽頻率療癒</title>
+<meta name="description" content="給關不掉大腦的你，一場60分鐘的深層靜音。不需練習冥想，只需躺下感受。台北・嘉義・高雄頌缽頻率療癒空間。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+TC:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1410;
+    --parchment: #f5f0e8;
+    --warm-white: #faf8f4;
+    --sand: #c8b89a;
+    --clay: #8a6e52;
+    --moss: #5a6650;
+    --mist: #e8e2d8;
+    --deep: #2d251e;
+    --accent: #b5956e;
+    --gold: #c9a96e;
+    --green: #3a5c42;
+    --font-serif: 'Cormorant Garamond', 'Noto Serif TC', serif;
+    --font-sans: 'Noto Sans TC', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--warm-white);
+    color: var(--ink);
+    overflow-x: hidden;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1rem 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    background: transparent;
+    transition: background 0.5s, backdrop-filter 0.5s;
+  }
+  nav.scrolled {
+    background: rgba(250,248,244,0.95);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--mist);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.6rem;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    width: 38px; height: 38px;
+    object-fit: contain;
+    transition: filter 0.4s;
+  }
+  nav:not(.scrolled) .nav-logo img { filter: brightness(0) invert(1); }
+  .nav-logo-text {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: var(--parchment);
+    transition: color 0.5s;
+  }
+  nav.scrolled .nav-logo-text { color: var(--deep); }
+  nav.scrolled .nav-logo img { filter: none; }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    color: rgba(245,240,232,0.85);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 300;
+  }
+  nav.scrolled .nav-links a { color: var(--clay); }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    padding: 0.6rem 1.4rem;
+    background: var(--gold);
+    color: var(--deep);
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 400;
+    border-radius: 2px;
+  }
+  .nav-cta:hover { background: var(--accent); color: var(--parchment); }
+
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px; cursor: pointer;
+    padding: 4px;
+  }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 1.5px;
+    background: var(--parchment); transition: background 0.5s;
+    border-radius: 2px;
+  }
+  nav.scrolled .nav-hamburger span { background: var(--deep); }
+
+  /* Mobile Nav Overlay */
+  .mobile-nav-overlay {
+    display: none;
+    position: fixed; inset: 0; z-index: 99;
+    background: rgba(45,37,30,0.97);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .mobile-nav-overlay.open { display: flex; }
+  .mobile-nav-overlay a {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: var(--parchment);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    transition: color 0.3s;
+  }
+  .mobile-nav-overlay a:hover { color: var(--gold); }
+  .mobile-nav-close {
+    position: absolute; top: 1.5rem; right: 5vw;
+    font-size: 2rem; color: var(--parchment); cursor: pointer;
+  }
+
+  /* ─── HERO ─── */
+  header#hero {
+    position: relative;
+    height: 100svh; min-height: 600px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    background: var(--deep);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-size: cover;
+    background-position: center 30%;
+    background-image: url('/mnt/project/LINE_ALBUM_2026126_260305_7.jpg');
+    filter: brightness(0.45);
+    transform: scale(1.05);
+    animation: slowZoom 20s ease-in-out infinite alternate;
+  }
+  @keyframes slowZoom {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.12); }
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(29,20,12,0.3) 0%,
+      rgba(29,20,12,0.15) 40%,
+      rgba(29,20,12,0.7) 100%
+    );
+    z-index: 1;
+  }
+  /* Sound ripples */
+  .hero-rings {
+    position: absolute; inset: 0; z-index: 1;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(201,169,110,0.18);
+    animation: ringExpand 6s ease-out infinite;
+  }
+  .ring:nth-child(1) { width: 180px; height: 180px; animation-delay: 0s; }
+  .ring:nth-child(2) { width: 340px; height: 340px; animation-delay: 1.5s; }
+  .ring:nth-child(3) { width: 520px; height: 520px; animation-delay: 3s; }
+  .ring:nth-child(4) { width: 700px; height: 700px; animation-delay: 4.5s; }
+  @keyframes ringExpand {
+    0%   { opacity: 0.7; transform: scale(0.88); }
+    100% { opacity: 0;   transform: scale(1.12); }
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    padding: 0 5vw;
+    max-width: 860px;
+    animation: fadeUp 1.2s ease both;
+    animation-delay: 0.3s;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-logo {
+    width: 72px; margin: 0 auto 1.6rem;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+    font-weight: 300;
+  }
+  .hero-content h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5.5vw, 4rem);
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.2rem;
+  }
+  .hero-content h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-subtitle {
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    color: rgba(245,240,232,0.65);
+    letter-spacing: 0.08em;
+    margin-bottom: 2.8rem;
+    font-weight: 300;
+    line-height: 2;
+  }
+  .hero-cta-row {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 1rem 2.4rem;
+    background: var(--gold);
+    color: var(--deep);
+    font-size: 0.82rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s;
+    border-radius: 2px;
+  }
+  .btn-primary:hover { background: var(--accent); color: var(--parchment); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+  .btn-ghost {
+    display: inline-block;
+    padding: 1rem 2.4rem;
+    border: 1px solid rgba(245,240,232,0.45);
+    color: rgba(245,240,232,0.85);
+    font-size: 0.82rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 2px;
+  }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-scroll-hint {
+    position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    color: rgba(245,240,232,0.4);
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+  .scroll-line {
+    width: 1px; height: 36px;
+    background: linear-gradient(to bottom, rgba(245,240,232,0.45), transparent);
+  }
+  @keyframes pulse { 0%,100%{opacity:0.35} 50%{opacity:0.9} }
+
+  /* ─── TRUST BAR ─── */
+  .trust-bar {
+    background: var(--deep);
+    padding: 1.2rem 5vw;
+    border-top: 1px solid rgba(201,169,110,0.15);
+  }
+  .trust-bar-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: center; align-items: center;
+    gap: 3rem; flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.72rem;
+    color: rgba(245,240,232,0.5);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+  .trust-icon { color: var(--gold); font-size: 0.9rem; }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: 6rem 5vw; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.35em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+  }
+  h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+    font-weight: 300;
+    line-height: 1.35;
+    letter-spacing: 0.03em;
+    color: var(--deep);
+    margin-bottom: 1.5rem;
+  }
+  h2 em { font-style: italic; color: var(--clay); }
+
+  /* ─── PAIN POINT ─── */
+  #pain-point { background: var(--parchment); }
+  .pain-lead {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    color: var(--clay);
+    letter-spacing: 0.05em;
+    margin-bottom: 3rem;
+    max-width: 540px;
+    line-height: 2;
+  }
+  .pain-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    margin-bottom: 3rem;
+  }
+  .pain-card {
+    background: var(--warm-white);
+    padding: 2.8rem 2.4rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s;
+    border-left: 3px solid transparent;
+    transition: border-color 0.4s, transform 0.4s;
+  }
+  .pain-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+  .pain-num {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--mist);
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+  .pain-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--deep);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .pain-card p { font-size: 0.85rem; color: var(--clay); line-height: 1.9; }
+  .pain-quote {
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--clay);
+    max-width: 600px;
+    line-height: 1.9;
+  }
+
+  /* ─── SOLUTION ─── */
+  #solution {
+    background: var(--deep);
+    color: var(--parchment);
+    position: relative; overflow: hidden;
+  }
+  #solution h2 { color: var(--parchment); }
+  #solution h2 em { color: var(--gold); }
+  .solution-intro {
+    font-size: 0.95rem;
+    color: rgba(245,240,232,0.6);
+    margin-bottom: 3.5rem;
+    max-width: 500px;
+    line-height: 2;
+    letter-spacing: 0.05em;
+  }
+  .solution-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(201,169,110,0.12);
+  }
+  .pillar {
+    background: var(--deep);
+    padding: 2.5rem 1.8rem;
+    transition: background 0.4s;
+    border-top: 2px solid transparent;
+    transition: border-color 0.4s, background 0.4s;
+  }
+  .pillar:hover { background: rgba(45,37,30,0.98); border-color: var(--gold); }
+  .pillar-num {
+    font-family: var(--font-serif);
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .pillar h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--parchment);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+  .pillar p {
+    font-size: 0.82rem;
+    color: rgba(245,240,232,0.5);
+    line-height: 2;
+    letter-spacing: 0.04em;
+  }
+  .pillar-tag {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(201,169,110,0.3);
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+  }
+
+  /* ─── VIDEO SECTION ─── */
+  #video-section {
+    background: var(--ink);
+    padding: 5rem 5vw;
+    text-align: center;
+  }
+  #video-section .section-eyebrow { color: var(--gold); }
+  #video-section h2 { color: var(--parchment); margin-bottom: 0.8rem; }
+  #video-section h2 em { color: var(--gold); }
+  .video-subtitle {
+    font-size: 0.88rem;
+    color: rgba(245,240,232,0.5);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.06em;
+    line-height: 1.8;
+  }
+  .video-wrapper {
+    max-width: 820px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid rgba(201,169,110,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    border: none;
+  }
+  .video-caption {
+    margin-top: 1.5rem;
+    font-size: 0.72rem;
+    color: rgba(245,240,232,0.3);
+    letter-spacing: 0.15em;
+  }
+
+  /* ─── EXPERIENCES ─── */
+  #experiences { background: var(--warm-white); }
+  .exp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .exp-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    background: var(--deep);
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .exp-card-img {
+    position: absolute; inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s ease;
+    filter: brightness(0.55);
+  }
+  .exp-card:hover .exp-card-img { transform: scale(1.06); filter: brightness(0.45); }
+  .exp-card-img.sound {
+    background-image: url('/mnt/project/LINE_ALBUM_2026126_260305_29.jpg');
+  }
+  .exp-card-img.ritual {
+    background-image: url('/mnt/project/LINE_ALBUM_2026126_260305_19.jpg');
+  }
+  .exp-card-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,8,5,0.92) 0%, rgba(10,8,5,0.1) 55%, transparent 100%);
+    z-index: 1;
+  }
+  .exp-card-body {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 2rem 2rem 2.2rem;
+    z-index: 2;
+  }
+  .exp-tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .exp-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--parchment);
+    margin-bottom: 0.7rem;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+  }
+  .exp-card p {
+    font-size: 0.82rem;
+    color: rgba(245,240,232,0.65);
+    margin-bottom: 1.4rem;
+    line-height: 1.9;
+    letter-spacing: 0.04em;
+  }
+  .btn-outline-light {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid rgba(245,240,232,0.4);
+    color: rgba(245,240,232,0.85);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 2px;
+  }
+  .btn-outline-light:hover { border-color: var(--gold); color: var(--gold); }
+  .exp-duration {
+    position: absolute; top: 1.5rem; right: 1.5rem; z-index: 2;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,169,110,0.45);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: rgba(29,20,12,0.4);
+    backdrop-filter: blur(4px);
+  }
+  .exp-duration strong {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--gold);
+    font-weight: 300;
+    line-height: 1;
+  }
+  .exp-duration span { font-size: 0.52rem; color: rgba(245,240,232,0.5); letter-spacing: 0.08em; }
+
+  /* ─── CASSIE SECTION ─── */
+  #teacher {
+    background: var(--parchment);
+    overflow: hidden;
+  }
+  .teacher-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  /* CSS-only visual panel — no image needed */
+  .teacher-visual {
+    position: relative;
+    aspect-ratio: 3/4;
+    background: var(--deep);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .teacher-visual::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 85%, rgba(139,110,82,0.4) 0%, transparent 65%),
+      radial-gradient(ellipse 60% 40% at 50% 20%, rgba(90,102,80,0.18) 0%, transparent 60%),
+      linear-gradient(180deg, #1a1208 0%, #2d1f12 60%, #0e0b07 100%);
+  }
+  /* Ripple rings */
+  .teacher-rings {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .teacher-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(201,169,110,0.15);
+    animation: tRingExpand 5s ease-out infinite;
+  }
+  .teacher-ring:nth-child(1) { width: 110px; height: 110px; animation-delay: 0s; }
+  .teacher-ring:nth-child(2) { width: 200px; height: 200px; animation-delay: 1.3s; }
+  .teacher-ring:nth-child(3) { width: 310px; height: 310px; animation-delay: 2.6s; }
+  .teacher-ring:nth-child(4) { width: 430px; height: 430px; animation-delay: 3.9s; }
+  @keyframes tRingExpand {
+    0%   { opacity: 0.65; transform: scale(0.88); }
+    100% { opacity: 0;    transform: scale(1.12); }
+  }
+  /* Central bowl SVG art */
+  .teacher-bowl-art {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+    margin-bottom: 2.5rem;
+  }
+  /* Bowl shape using CSS */
+  .bowl-body {
+    width: 100px; height: 50px;
+    border: 2px solid rgba(201,169,110,0.55);
+    border-top: none;
+    border-radius: 0 0 60px 60px;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(201,169,110,0.06), rgba(201,169,110,0.02));
+  }
+  .bowl-rim {
+    width: 116px; height: 8px;
+    border: 2px solid rgba(201,169,110,0.45);
+    border-radius: 50%;
+    margin-bottom: -1px;
+    background: transparent;
+  }
+  .bowl-base {
+    width: 28px; height: 6px;
+    background: rgba(201,169,110,0.35);
+    border-radius: 3px;
+    margin-top: 0px;
+  }
+  .bowl-mallet {
+    position: absolute;
+    right: -18px; top: -20px;
+    width: 4px; height: 48px;
+    background: linear-gradient(to bottom, rgba(201,169,110,0.6), rgba(139,110,82,0.3));
+    border-radius: 2px;
+    transform: rotate(25deg);
+    transform-origin: bottom center;
+  }
+  .bowl-mallet::after {
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(201,169,110,0.7);
+  }
+  /* Star above bowl */
+  .bowl-star {
+    font-size: 1.4rem;
+    color: rgba(201,169,110,0.7);
+    margin-bottom: 1.2rem;
+    animation: starGlow 3s ease-in-out infinite alternate;
+    position: relative; z-index: 2;
+  }
+  @keyframes starGlow {
+    from { opacity: 0.5; text-shadow: none; }
+    to   { opacity: 1;   text-shadow: 0 0 20px rgba(201,169,110,0.5); }
+  }
+  /* Name plate at bottom */
+  .teacher-nameplate {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    z-index: 2;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(10,7,4,0.92) 0%, transparent 100%);
+    text-align: center;
+  }
+  .teacher-nameplate-name {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--parchment);
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .teacher-nameplate-sub {
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 0.28em;
+  }
+  /* Stats row inside visual */
+  .teacher-stats {
+    position: absolute; top: 1.8rem; left: 0; right: 0;
+    z-index: 2;
+    display: flex; justify-content: center; gap: 2rem;
+  }
+  .teacher-stat {
+    text-align: center;
+  }
+  .teacher-stat-num {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: var(--gold);
+    font-weight: 300;
+    line-height: 1;
+    display: block;
+  }
+  .teacher-stat-label {
+    font-size: 0.58rem;
+    color: rgba(245,240,232,0.4);
+    letter-spacing: 0.12em;
+    margin-top: 0.2rem;
+    display: block;
+  }
+  .teacher-text { padding: 0.5rem 0; }
+  .teacher-name {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--deep);
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.06em;
+  }
+  .teacher-title {
+    font-size: 0.76rem;
+    color: var(--accent);
+    letter-spacing: 0.22em;
+    margin-bottom: 1.8rem;
+  }
+  .teacher-bio {
+    font-size: 0.88rem;
+    color: var(--clay);
+    line-height: 2;
+    margin-bottom: 2rem;
+    letter-spacing: 0.04em;
+  }
+  .teacher-creds {
+    display: flex; flex-direction: column; gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .cred-item {
+    display: flex; align-items: flex-start; gap: 0.8rem;
+    font-size: 0.82rem;
+    color: var(--deep);
+    line-height: 1.6;
+  }
+  .cred-icon { color: var(--gold); flex-shrink: 0; margin-top: 0.1rem; }
+
+  /* ─── SCIENCE ─── */
+  #science { background: var(--warm-white); }
+  .science-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .science-text p {
+    font-size: 0.88rem;
+    color: var(--clay);
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
+  }
+  .science-stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(201,169,110,0.15);
+    margin-top: 2rem;
+  }
+  .stat-box {
+    background: var(--parchment);
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    color: var(--accent);
+    font-weight: 300;
+    display: block;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+    color: var(--clay);
+    letter-spacing: 0.08em;
+    margin-top: 0.4rem;
+    line-height: 1.6;
+  }
+  .freq-diagram {
+    background: var(--deep);
+    padding: 2.5rem;
+  }
+  .freq-title {
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    opacity: 0.8;
+  }
+  .freq-rows { display: flex; flex-direction: column; gap: 1.4rem; }
+  .freq-row { display: flex; align-items: center; gap: 1rem; }
+  .freq-label {
+    font-family: var(--font-serif);
+    font-size: 0.78rem;
+    color: var(--parchment);
+    width: 76px;
+    flex-shrink: 0;
+    letter-spacing: 0.06em;
+  }
+  .freq-bar-wrap { flex: 1; height: 2px; background: rgba(255,255,255,0.07); }
+  .freq-bar { height: 100%; position: relative; }
+  .freq-bar::after {
+    content: '';
+    position: absolute; right: 0; top: 50%;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: inherit;
+    transform: translateY(-50%);
+  }
+  .freq-bar.beta  { width: 90%; background: rgba(180,100,100,0.85); }
+  .freq-bar.alpha { width: 58%; background: rgba(201,169,110,0.85); }
+  .freq-bar.theta { width: 32%; background: rgba(100,160,140,0.85); }
+  .freq-val { font-size: 0.62rem; color: rgba(245,240,232,0.35); letter-spacing: 0.08em; width: 56px; text-align: right; flex-shrink: 0; }
+  .freq-sublabel { font-size: 0.62rem; color: rgba(245,240,232,0.35); letter-spacing: 0.06em; }
+  .freq-note {
+    margin-top: 2rem;
+    font-size: 0.72rem;
+    color: rgba(245,240,232,0.35);
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 1.5rem;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  #testimonials { background: var(--parchment); }
+  .testi-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .testi-carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--mist);
+  }
+  .testi-card {
+    background: var(--warm-white);
+    padding: 2.2rem;
+  }
+  .testi-stars { color: var(--gold); font-size: 0.75rem; margin-bottom: 0.8rem; letter-spacing: 0.1em; }
+  .testi-quote-mark {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    color: var(--mist);
+    line-height: 0.8;
+    margin-bottom: 0.8rem;
+  }
+  .testi-text {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: var(--deep);
+    line-height: 1.85;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  .testi-meta { display: flex; align-items: center; gap: 0.8rem; }
+  .testi-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--mist);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    color: var(--clay);
+    flex-shrink: 0;
+  }
+  .testi-name { font-size: 0.78rem; color: var(--deep); letter-spacing: 0.06em; font-weight: 400; }
+  .testi-role { font-size: 0.68rem; color: var(--sand); letter-spacing: 0.05em; }
+
+  /* ─── CONVERSION ─── */
+  #conversion {
+    background: var(--deep);
+    position: relative; overflow: hidden;
+  }
+  #conversion::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(ellipse 70% 70% at 80% 50%, rgba(139,110,82,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .conversion-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative; z-index: 1;
+  }
+  #conversion h2 { color: var(--parchment); }
+  #conversion h2 em { color: var(--gold); }
+  #conversion .lead {
+    font-size: 0.9rem;
+    color: rgba(245,240,232,0.55);
+    line-height: 2;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+  }
+  .conversion-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .offer-box {
+    border: 1px solid rgba(201,169,110,0.25);
+    padding: 2.2rem;
+    background: rgba(255,255,255,0.02);
+  }
+  .offer-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--gold);
+    color: var(--deep);
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+  }
+  .offer-title {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: var(--parchment);
+    margin-bottom: 1rem;
+    font-weight: 300;
+    line-height: 1.45;
+  }
+  .offer-steps { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.8rem; }
+  .offer-step {
+    display: flex; align-items: flex-start; gap: 0.8rem;
+    font-size: 0.8rem;
+    color: rgba(245,240,232,0.65);
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+  }
+  .offer-step-num {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--gold);
+    width: 20px;
+    flex-shrink: 0;
+    font-weight: 300;
+  }
+  .offer-perks {
+    font-size: 0.75rem;
+    color: rgba(245,240,232,0.4);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── LOCATIONS ─── */
+  #locations { background: var(--parchment); }
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: rgba(200,184,154,0.3);
+    margin-top: 2.5rem;
+  }
+  .location-card {
+    background: var(--warm-white);
+    padding: 2.2rem 1.8rem;
+    transition: transform 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+  .location-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+  .location-card:hover { transform: translateY(-4px); }
+  .location-card:hover::after { transform: scaleX(1); }
+  .loc-city-label { font-size: 0.62rem; letter-spacing: 0.3em; color: var(--accent); margin-bottom: 0.7rem; display: block; }
+  .location-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--deep);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+  .loc-map-placeholder {
+    width: 100%;
+    aspect-ratio: 16/7;
+    background: linear-gradient(135deg, var(--mist) 0%, var(--parchment) 100%);
+    margin-bottom: 1.2rem;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .map-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(139,110,82,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139,110,82,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .map-pin {
+    width: 10px; height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(201,169,110,0.2);
+    position: relative; z-index: 1;
+    animation: pinPulse 2s ease-in-out infinite;
+  }
+  @keyframes pinPulse {
+    0%,100% { box-shadow: 0 0 0 4px rgba(201,169,110,0.2); }
+    50%      { box-shadow: 0 0 0 8px rgba(201,169,110,0.08); }
+  }
+  .loc-info { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
+  .loc-info-row {
+    display: flex; align-items: flex-start; gap: 0.5rem;
+    font-size: 0.79rem;
+    color: var(--clay);
+    letter-spacing: 0.03em;
+    line-height: 1.7;
+  }
+  .loc-info-icon { flex-shrink: 0; margin-top: 0.1rem; font-size: 0.85rem; }
+
+  /* ─── FINAL CTA ─── */
+  #final-cta {
+    background: var(--ink);
+    padding: 6rem 5vw;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .final-rings {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none;
+  }
+  .final-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(201,169,110,0.07);
+  }
+  .final-ring:nth-child(1) { width: 400px; height: 400px; }
+  .final-ring:nth-child(2) { width: 600px; height: 600px; }
+  .final-ring:nth-child(3) { width: 800px; height: 800px; }
+  .final-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    position: relative; z-index: 1;
+  }
+  #final-cta h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+    font-weight: 300;
+    color: var(--parchment);
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+    position: relative; z-index: 1;
+  }
+  #final-cta h2 em { color: var(--gold); font-style: italic; }
+  #final-cta p {
+    font-size: 0.9rem;
+    color: rgba(245,240,232,0.45);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.08em;
+    position: relative; z-index: 1;
+    line-height: 1.9;
+  }
+  .final-cta-wrap {
+    position: relative; z-index: 1;
+    display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn-large { padding: 1.1rem 2.8rem; font-size: 0.82rem; letter-spacing: 0.22em; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--deep);
+    padding: 3rem 5vw;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .footer-logo-wrap { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+  .footer-logo-img { width: 32px; height: 32px; object-fit: contain; opacity: 0.75; filter: brightness(0) invert(1); }
+  .footer-brand-name {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--parchment);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+  .footer-brand-tagline {
+    font-size: 0.74rem;
+    color: rgba(245,240,232,0.3);
+    letter-spacing: 0.1em;
+    line-height: 2;
+  }
+  .footer-col h4 {
+    font-size: 0.62rem;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-links a {
+    font-size: 0.78rem;
+    color: rgba(245,240,232,0.38);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--parchment); }
+  .footer-bottom {
+    max-width: 1100px; margin: 2rem auto 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.66rem;
+    color: rgba(245,240,232,0.18);
+    letter-spacing: 0.1em;
+    flex-wrap: wrap; gap: 0.5rem;
+  }
+
+  /* ─── STICKY CTA (Mobile-optimized) ─── */
+  .sticky-cta {
+    position: fixed; bottom: 1.2rem; left: 50%; transform: translateX(-50%);
+    z-index: 200;
+    display: none;
+    background: var(--gold);
+    color: var(--deep);
+    padding: 0.95rem 2.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    font-weight: 400;
+    text-decoration: none;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    white-space: nowrap;
+    transition: transform 0.3s, background 0.3s;
+    border-radius: 3px;
+  }
+  .sticky-cta:hover { background: var(--accent); color: var(--parchment); transform: translateX(-50%) translateY(-2px); }
+  .sticky-cta.visible { display: block; animation: slideUp 0.4s ease both; }
+  @keyframes slideUp { from { opacity:0; transform: translateX(-50%) translateY(16px); } to { opacity:1; transform: translateX(-50%) translateY(0); } }
+
+  /* ─── SCROLL REVEAL ─── */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.75s ease, transform 0.75s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    section { padding: 4.5rem 5vw; }
+    .pain-cards { grid-template-columns: 1fr; }
+    .solution-pillars { grid-template-columns: 1fr; }
+    .exp-grid { grid-template-columns: 1fr; }
+    .exp-card { aspect-ratio: 4/3; }
+    .science-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .science-stat-row { grid-template-columns: repeat(3, 1fr); }
+    .testi-carousel { grid-template-columns: 1fr; }
+    .conversion-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .locations-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
+    .teacher-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .teacher-visual { aspect-ratio: 4/3; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-cta-row { flex-direction: column; align-items: stretch; }
+    .btn-primary, .btn-ghost { text-align: center; }
+    .science-stat-row { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .hero-content h1 { font-size: 1.85rem; }
+    .hero-logo { width: 56px; }
+    .trust-bar-inner { gap: 1.2rem; }
+    #video-section { padding: 3.5rem 5vw; }
+    .conversion-cta-row { flex-direction: column; }
+    .sticky-cta { font-size: 0.76rem; padding: 0.9rem 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo">
+    <img src="/mnt/project/樺芯苑LOGO3.png" alt="樺芯苑" class="">
+    <span class="nav-logo-text">樺芯苑</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#experiences">療癒體驗</a></li>
+    <li><a href="#teacher">師資介紹</a></li>
+    <li><a href="#science">科學實證</a></li>
+    <li><a href="#locations">空間據點</a></li>
+  </ul>
+  <a href="https://soulvibetw.com/booking" class="nav-cta">立即預約</a>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav-overlay" id="mobile-nav">
+  <span class="mobile-nav-close" id="nav-close">✕</span>
+  <a href="#experiences" class="mobile-nav-link">療癒體驗</a>
+  <a href="#teacher" class="mobile-nav-link">師資介紹</a>
+  <a href="#science" class="mobile-nav-link">科學實證</a>
+  <a href="#locations" class="mobile-nav-link">空間據點</a>
+  <a href="https://soulvibetw.com/booking" class="btn-primary" style="margin-top:1rem;letter-spacing:0.2em;">立即預約體驗</a>
+</div>
+
+<!-- ━━━ HERO ━━━ -->
+<header id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-rings">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
+  <div class="hero-content">
+    <img src="/mnt/project/樺芯苑LOGO3.png" alt="樺芯苑" class="hero-logo">
+    <p class="hero-eyebrow">頌缽 · 頻率 · 療癒空間</p>
+    <h1>給關不掉大腦的你，<br>一場 <em>60 分鐘</em>的深層靜音</h1>
+    <p class="hero-subtitle">不需練習冥想，只需躺下感受<br>為都會高壓族設計的頻率放鬆所・台北・嘉義・高雄</p>
+    <div class="hero-cta-row">
+      <a href="https://soulvibetw.com/booking" class="btn-primary">立即預約體驗</a>
+      <a href="#experiences" class="btn-ghost">了解體驗內容</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    向下探索
+  </div>
+</header>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="trust-icon">🏔</span> 師承尼泊爾國寶大師</div>
+    <div class="trust-item"><span class="trust-icon">✦</span> 逾百位療癒個案</div>
+    <div class="trust-item"><span class="trust-icon">🌿</span> 台北・嘉義・高雄三館</div>
+    <div class="trust-item"><span class="trust-icon">✦</span> 零推銷零壓力</div>
+  </div>
+</div>
+
+<!-- ━━━ PAIN POINT ━━━ -->
+<section id="pain-point">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">關於你此刻的狀態</p>
+    <h2 class="reveal">你的身體在休息，<br><em>大腦卻還在加班嗎？</em></h2>
+    <p class="pain-lead reveal">深夜滑手機卻越來越清醒。肩頸僵硬如石。四周的噪音與情緒正在消耗你。你不是懶，你只是太久沒有真正靜下來。</p>
+    <div class="pain-cards">
+      <div class="pain-card reveal reveal-delay-1">
+        <div class="pain-num">01</div>
+        <h3>腦袋像開了 50 個視窗，<br>越累反而越睡不著</h3>
+        <p>傳統冥想太難，你根本靜不下來。躺在床上，腦袋自動排演明天的會議，入睡困難，即便睡著也多夢易醒。</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-2">
+        <div class="pain-num">02</div>
+        <h3>肩頸僵硬如石，對周遭噪音<br>與情緒感到極度耗竭</h3>
+        <p>長期姿勢固定、高敏感體質，能量被四周環境不斷抽乾。按摩效果短暫，你需要的不只是放鬆身體。</p>
+      </div>
+    </div>
+    <blockquote class="pain-quote reveal">
+      「我感覺腦袋快炸了，同時有好幾十個視窗開著，怎麼樣都關不掉。」
+    </blockquote>
+  </div>
+</section>
+
+<!-- ━━━ SOLUTION ━━━ -->
+<section id="solution">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal" style="color:var(--gold);">我們的核心主張</p>
+    <h2 class="reveal">真正的放鬆，<br><em>不需要你付出任何努力</em></h2>
+    <p class="solution-intro reveal">物理聲波共振，讓你在完全被動的狀態下，自然進入深層的身心重啟。</p>
+    <div class="solution-pillars">
+      <div class="pillar reveal reveal-delay-1">
+        <span class="pillar-num">— 01</span>
+        <h3>不需練習冥想</h3>
+        <p>頌缽的物理聲波自動引導腦波，從高壓的 Beta 頻率切換至 Alpha / Theta 深層放鬆狀態。不需努力，科學自然發生。</p>
+        <span class="pillar-tag">物理聲學</span>
+      </div>
+      <div class="pillar reveal reveal-delay-2">
+        <span class="pillar-num">— 02</span>
+        <h3>不需尬聊社交</h3>
+        <p>保留你完整的個人結界。全程安靜沉浸，無須與他人分享感受，高敏感體質者同樣舒適自在。</p>
+        <span class="pillar-tag">安靜體驗</span>
+      </div>
+      <div class="pillar reveal reveal-delay-3">
+        <span class="pillar-num">— 03</span>
+        <h3>不被推銷打擾</h3>
+        <p>純粹的療癒體驗。不強制消費、不推薦法器、無額外費用。你帶著平靜離開，就是我們的全部目的。</p>
+        <span class="pillar-tag">零壓力</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ VIDEO SECTION ━━━ -->
+<section id="video-section">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal" style="color:var(--gold);">感受聲波的力量</p>
+    <h2 class="reveal">聽見頌缽的<em>真實頻率</em></h2>
+    <p class="video-subtitle reveal">文字無法完全描述這個體驗。先讓你的耳朵感受看看。</p>
+    <div class="video-wrapper reveal">
+      <iframe 
+        src="https://www.youtube.com/embed/CYJLGdbAZHo?rel=0&modestbranding=1&color=white" 
+        title="樺芯苑頌缽音療體驗"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="video-caption reveal">🎧 建議使用耳機以獲得最佳聆聽體驗</p>
+  </div>
+</section>
+
+<!-- ━━━ EXPERIENCES ━━━ -->
+<section id="experiences">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">選擇你的避風港</p>
+    <h2 class="reveal">感受聲波，<em>或感受氣味</em></h2>
+    <div class="exp-grid">
+      <div class="exp-card reveal reveal-delay-1">
+        <div class="exp-card-img sound"></div>
+        <div class="exp-card-overlay"></div>
+        <div class="exp-duration">
+          <strong>60</strong>
+          <span>分鐘</span>
+        </div>
+        <div class="exp-card-body">
+          <span class="exp-tag">SOUND HEALING</span>
+          <h3>深度頌缽<br>靜音體驗</h3>
+          <p>尼泊爾手工缽的純粹音波，共振你的每一個細胞。讓大腦從 Beta 波自動沉入 Alpha 的安靜海洋。</p>
+          <a href="https://soulvibetw.com/booking" class="btn-outline-light">立即預約</a>
+        </div>
+      </div>
+      <div class="exp-card reveal reveal-delay-2">
+        <div class="exp-card-img ritual" style="background-image: url('/mnt/project/LINE_ALBUM_2026126_260305_19.jpg');"></div>
+        <div class="exp-card-overlay"></div>
+        <div class="exp-duration">
+          <strong>75</strong>
+          <span>分鐘</span>
+        </div>
+        <div class="exp-card-body">
+          <span class="exp-tag">DEEP HEALING</span>
+          <h3>頌缽放置<br>深層療癒</h3>
+          <p>療癒師將頌缽放置於身體各脈輪部位，透過直接的物理共振，深入釋放積累已久的緊繃與阻滯能量。</p>
+          <a href="https://soulvibetw.com/booking" class="btn-outline-light">立即預約</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ TEACHER / CASSIE ━━━ -->
+<section id="teacher">
+  <div class="section-inner">
+    <div class="teacher-layout">
+      <!-- CSS-only visual panel: no local image dependency -->
+      <div class="teacher-visual reveal">
+        <div class="teacher-rings">
+          <div class="teacher-ring"></div>
+          <div class="teacher-ring"></div>
+          <div class="teacher-ring"></div>
+          <div class="teacher-ring"></div>
+        </div>
+        <div class="teacher-stats">
+          <div class="teacher-stat">
+            <span class="teacher-stat-num">100+</span>
+            <span class="teacher-stat-label">療癒個案</span>
+          </div>
+          <div class="teacher-stat">
+            <span class="teacher-stat-num">3+</span>
+            <span class="teacher-stat-label">年教學經驗</span>
+          </div>
+          <div class="teacher-stat">
+            <span class="teacher-stat-num">3</span>
+            <span class="teacher-stat-label">城市據點</span>
+          </div>
+        </div>
+        <span class="bowl-star">✦</span>
+        <div class="teacher-bowl-art">
+          <div class="bowl-rim"></div>
+          <div class="bowl-body">
+            <div class="bowl-mallet"></div>
+          </div>
+          <div class="bowl-base"></div>
+        </div>
+        <div class="teacher-nameplate">
+          <span class="teacher-nameplate-name">王巧慧 Cassie</span>
+          <span class="teacher-nameplate-sub">SOUND HEALING PRACTITIONER</span>
+        </div>
+      </div>
+      <div class="teacher-text reveal reveal-delay-1">
+        <p class="section-eyebrow">專業師資</p>
+        <h2 style="margin-bottom:0.2rem;">王巧慧<br><em>Cassie Wang</em></h2>
+        <p class="teacher-title">樺芯苑創辦人 · 頌缽療癒師</p>
+        <p class="teacher-bio">
+          師承尼泊爾國寶級大師 桑塔大師（Santosh Kumar），親赴原產地接受最正統的喜馬拉雅頌缽療癒訓練。回台後以三年深耕超過百位個案，讓都會高壓族在一次 60 分鐘的頌缽聲波中，真正體驗到深層放鬆的可能。
+        </p>
+        <div class="teacher-creds">
+          <div class="cred-item">
+            <span class="cred-icon">🏔</span>
+            <span>師承尼泊爾國寶大師桑塔・親赴加德滿都受訓</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-icon">🎓</span>
+            <span>喜馬拉雅頌缽療癒師認證・七脈輪頻率調頻訓練</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-icon">✦</span>
+            <span>三年教學經驗・逾百位一對一療癒個案</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-icon">🌿</span>
+            <span>KUSU HANDMADE & wacca 精油品牌台灣授權代理</span>
+          </div>
+        </div>
+        <a href="https://soulvibetw.com/booking" class="btn-primary">預約與 Cassie 的療癒時光</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ SCIENCE ━━━ -->
+<section id="science">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">科學實證背書</p>
+    <h2 class="reveal">不是玄學，<em>是頻率管理</em></h2>
+    <div class="science-layout">
+      <div class="science-text">
+        <p class="reveal">頌缽療癒的核心原理來自物理聲學：特定頻率的聲波在人體組織中產生共振，透過神經系統調節，有助於舒緩緊張感受、促進身心放鬆狀態。</p>
+        <p class="reveal">多項國際學術研究指出，規律接受缽療的受測者在睡眠品質感受與焦慮程度自評上均有正面變化。樺芯苑的療癒師均取得尼泊爾缽療認證，並持續深化物理聲波的專業訓練。</p>
+        <div class="science-stat-row reveal">
+          <div class="stat-box">
+            <span class="stat-num">↓23%</span>
+            <span class="stat-label">皮質醇感受<br>顯著改善 *</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">87%</span>
+            <span class="stat-label">學員睡眠<br>品質正面回饋 *</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">60min</span>
+            <span class="stat-label">一次體驗<br>感受差異</span>
+          </div>
+        </div>
+        <p class="reveal" style="font-size:0.68rem;color:var(--sand);line-height:1.7;margin-top:1rem;letter-spacing:0.04em;">* 數據來源為第三方獨立學術研究結果，非本品牌臨床實驗數據。頌缽療癒為身心放鬆體驗服務，不具醫療診斷或治療效果。</p>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="freq-diagram">
+          <p class="freq-title">BRAINWAVE FREQUENCY GUIDE ／ 腦波頻率引導</p>
+          <div class="freq-rows">
+            <div class="freq-row">
+              <span class="freq-label">Beta 波</span>
+              <div class="freq-bar-wrap"><div class="freq-bar beta"></div></div>
+              <span class="freq-val">14–30Hz</span>
+            </div>
+            <div class="freq-row">
+              <span class="freq-sublabel" style="padding-left:76px;margin-left:1rem;width:100%;">高壓・焦慮・腦袋轉不停</span>
+            </div>
+            <div class="freq-row" style="margin-top:0.3rem;">
+              <span class="freq-label">Alpha 波</span>
+              <div class="freq-bar-wrap"><div class="freq-bar alpha"></div></div>
+              <span class="freq-val">8–13Hz</span>
+            </div>
+            <div class="freq-row">
+              <span class="freq-sublabel" style="padding-left:76px;margin-left:1rem;width:100%;">平靜・專注・創意甦醒</span>
+            </div>
+            <div class="freq-row" style="margin-top:0.3rem;">
+              <span class="freq-label">Theta 波</span>
+              <div class="freq-bar-wrap"><div class="freq-bar theta"></div></div>
+              <span class="freq-val">4–7Hz</span>
+            </div>
+            <div class="freq-row">
+              <span class="freq-sublabel" style="padding-left:76px;margin-left:1rem;width:100%;">深層放鬆・直覺・深睡邊界</span>
+            </div>
+          </div>
+          <p class="freq-note">頌缽聲波的物理頻率可引導腦波從 Beta 自然過渡至 Alpha / Theta 狀態，無需練習，只需傾聽。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ TESTIMONIALS ━━━ -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="testi-header">
+      <div>
+        <p class="section-eyebrow reveal">學員真實回饋</p>
+        <h2 class="reveal">他們在這裡，<em>找回了丟失的睡眠</em></h2>
+      </div>
+    </div>
+    <div class="testi-carousel">
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">原本以為會很玄，結果頌缽一敲我立刻睡死。醒來時完全不知道身在何處，是種很奇妙的安心感。</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">K</div>
+          <div>
+            <div class="testi-name">Kelly L.</div>
+            <div class="testi-role">34 歲・軟體產品經理</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">環境非常乾淨、舒服，老師完全不推銷任何東西。對我這種社交恐懼的人來說，這裡簡直是天堂。</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Amber C.</div>
+            <div class="testi-role">29 歲・接案設計師</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">肩頸硬了三年，按摩只能撐幾天。缽療之後整個人好像被重置了，一周後肩膀還是輕的。</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">J</div>
+          <div>
+            <div class="testi-name">Jason W.</div>
+            <div class="testi-role">41 歲・廣告創意總監</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ CONVERSION ━━━ -->
+<section id="conversion">
+  <div class="conversion-inner">
+    <div>
+      <p class="section-eyebrow reveal" style="color:var(--gold);">體驗折抵方案</p>
+      <h2 class="reveal">把平靜的頻率，<br><em>帶回日常</em></h2>
+      <p class="lead reveal">首次體驗課程的費用，可全額折抵樺芯苑旗下產品。讓這次的療癒，成為你日常重啟儀式的起點。</p>
+      <div class="conversion-cta-row reveal">
+        <a href="https://soulvibetw.com/booking" class="btn-primary btn-large">預約體驗</a>
+        <a href="https://soulvibetw.com/shop" class="btn-ghost btn-large" style="color:rgba(245,240,232,0.65);border-color:rgba(245,240,232,0.2);">探索線上選品</a>
+      </div>
+    </div>
+    <div class="offer-box reveal reveal-delay-1">
+      <span class="offer-badge">首次體驗獨家優惠</span>
+      <p class="offer-title">三步驟完成預約，<br>輕鬆進入深層靜音</p>
+      <div class="offer-steps">
+        <div class="offer-step">
+          <span class="offer-step-num">1</span>
+          <span>選擇你想體驗的方案與偏好的據點</span>
+        </div>
+        <div class="offer-step">
+          <span class="offer-step-num">2</span>
+          <span>挑選最近的可用時段，完成預約付款</span>
+        </div>
+        <div class="offer-step">
+          <span class="offer-step-num">3</span>
+          <span>收到無壓力行前通知，只需準時到達即可</span>
+        </div>
+      </div>
+      <p class="offer-perks">✓ 可彈性改期　✓ 無強制消費　✓ 體驗費用可折抵選品</p>
+      <a href="https://soulvibetw.com/booking" class="btn-primary" style="display:block;text-align:center;">立即預約</a>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ LOCATIONS ━━━ -->
+<section id="locations">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">距離你最近的避風港</p>
+    <h2 class="reveal">選擇你的<em>重啟據點</em></h2>
+    <div class="locations-grid">
+      <div class="location-card reveal reveal-delay-1">
+        <span class="loc-city-label">TAIPEI ／ 台北</span>
+        <h3>台北館</h3>
+        <div class="loc-map-placeholder">
+          <div class="map-grid"></div>
+          <div class="map-pin"></div>
+        </div>
+        <div class="loc-info">
+          <div class="loc-info-row">
+            <span class="loc-info-icon">📍</span>
+            <span>迴咖啡・捷運民權西路站步行 5 分鐘</span>
+          </div>
+          <div class="loc-info-row">
+            <span class="loc-info-icon">🕐</span>
+            <span>週二至週日 10:00–21:00</span>
+          </div>
+        </div>
+        <a href="https://soulvibetw.com/booking?location=taipei" class="btn-primary" style="display:block;text-align:center;font-size:0.78rem;padding:0.85rem;">選擇台北館預約</a>
+      </div>
+      <div class="location-card reveal reveal-delay-2">
+        <span class="loc-city-label">CHIAYI ／ 嘉義</span>
+        <h3>嘉義館</h3>
+        <div class="loc-map-placeholder">
+          <div class="map-grid"></div>
+          <div class="map-pin"></div>
+        </div>
+        <div class="loc-info">
+          <div class="loc-info-row">
+            <span class="loc-info-icon">📍</span>
+            <span>嘉義市東區・蘭井街 342 號</span>
+          </div>
+          <div class="loc-info-row">
+            <span class="loc-info-icon">🕐</span>
+            <span>週二至週日 10:00–20:00</span>
+          </div>
+        </div>
+        <a href="https://soulvibetw.com/booking?location=chiayi" class="btn-primary" style="display:block;text-align:center;font-size:0.78rem;padding:0.85rem;">選擇嘉義館預約</a>
+      </div>
+      <div class="location-card reveal reveal-delay-3">
+        <span class="loc-city-label">KAOHSIUNG ／ 高雄</span>
+        <h3>高雄館</h3>
+        <div class="loc-map-placeholder">
+          <div class="map-grid"></div>
+          <div class="map-pin"></div>
+        </div>
+        <div class="loc-info">
+          <div class="loc-info-row">
+            <span class="loc-info-icon">📍</span>
+            <span>橋頭區・捷運橋頭糖廠站 2 號出口步行 3 分鐘</span>
+          </div>
+          <div class="loc-info-row">
+            <span class="loc-info-icon">🕐</span>
+            <span>週二至週日 10:00–20:00</span>
+          </div>
+        </div>
+        <a href="https://soulvibetw.com/booking?location=kaohsiung" class="btn-primary" style="display:block;text-align:center;font-size:0.78rem;padding:0.85rem;">選擇高雄館預約</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <div class="final-rings">
+    <div class="final-ring"></div>
+    <div class="final-ring"></div>
+    <div class="final-ring"></div>
+  </div>
+  <p class="final-eyebrow">是時候了</p>
+  <h2>讓大腦<em>真正離線</em>一次</h2>
+  <p>不需要準備，不需要練習。<br>只需要躺下，感受聲波。</p>
+  <div class="final-cta-wrap">
+    <a href="https://soulvibetw.com/booking" class="btn-primary btn-large">選擇據點，預約重啟時光</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-wrap">
+        <img src="/mnt/project/樺芯苑LOGO3.png" alt="樺芯苑" class="footer-logo-img">
+        <span class="footer-brand-name">樺芯苑</span>
+      </div>
+      <p class="footer-brand-tagline">專為都會高壓族設計的<br>大腦離線與身心重啟空間<br><br>台北・嘉義・高雄</p>
+    </div>
+    <div class="footer-col">
+      <h4>療癒體驗</h4>
+      <ul class="footer-links">
+        <li><a href="https://soulvibetw.com/experiences/sound-healing">深度頌缽靜音</a></li>
+        <li><a href="https://soulvibetw.com/experiences/deep-healing">頌缽深層療癒</a></li>
+        <li><a href="https://soulvibetw.com/experiences/certification">師資認證課程</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>關於我們</h4>
+      <ul class="footer-links">
+        <li><a href="https://soulvibetw.com/science">科學實證</a></li>
+        <li><a href="https://soulvibetw.com/teacher">專業師資</a></li>
+        <li><a href="https://soulvibetw.com/shop">頌缽選品</a></li>
+        <li><a href="https://soulvibetw.com/locations">空間據點</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>服務支援</h4>
+      <ul class="footer-links">
+        <li><a href="https://soulvibetw.com/faq">常見問題</a></li>
+        <li><a href="https://soulvibetw.com/contact">聯絡我們</a></li>
+        <li><a href="https://soulvibetw.com/privacy">隱私權政策</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 樺芯苑 HUAXIN YUAN · Soulvibe. All rights reserved.</span>
+    <span>頻率療癒・身心重啟・台北・嘉義・高雄</span>
+  </div>
+</footer>
+
+<!-- STICKY CTA -->
+<a href="https://soulvibetw.com/booking" class="sticky-cta" id="sticky-cta">📅 立即預約療癒體驗</a>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile nav
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  const navClose = document.getElementById('nav-close');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  hamburger.addEventListener('click', () => mobileNav.classList.add('open'));
+  navClose.addEventListener('click', () => mobileNav.classList.remove('open'));
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => mobileNav.classList.remove('open'));
+  });
+
+  // Sticky CTA
+  const stickyCta = document.getElementById('sticky-cta');
+  window.addEventListener('scroll', () => {
+    stickyCta.classList.toggle('visible', window.scrollY > 500);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
