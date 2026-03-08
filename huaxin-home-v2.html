@@ -21,7 +21,7 @@
     --mist: #e8e2d8;
     --deep: #2d251e;
     --accent: #b5956e;
-    --gold: #c9a96e;
+    --gold: #b38728; /* Deeper Metallic Gold */
     --green: #3a5c42;
     --font-serif: 'Cormorant Garamond', 'Noto Serif TC', serif;
     --font-sans: 'Noto Sans TC', sans-serif;
@@ -34,8 +34,9 @@
     background: var(--warm-white);
     color: var(--ink);
     overflow-x: hidden;
-    font-weight: 300;
+    font-weight: 400; /* Increased from 300 */
     line-height: 1.8;
+    font-size: 20px; /* Base size increase */
   }
 
   /* ─── NAV ─── */
@@ -61,7 +62,6 @@
     object-fit: contain;
     transition: filter 0.4s;
   }
-  nav:not(.scrolled) .nav-logo img { filter: brightness(0) invert(1); }
   .nav-logo-text {
     font-family: var(--font-serif);
     font-size: 1.3rem;
@@ -77,25 +77,25 @@
     display: flex; gap: 2rem; list-style: none;
   }
   .nav-links a {
-    font-size: 0.78rem;
-    letter-spacing: 0.15em;
-    color: rgba(245,240,232,0.85);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: rgba(245,240,232,0.9);
     text-decoration: none;
     transition: color 0.3s;
-    font-weight: 300;
+    font-weight: 500;
   }
   nav.scrolled .nav-links a { color: var(--clay); }
   .nav-links a:hover { color: var(--gold); }
 
   .nav-cta {
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
     padding: 0.6rem 1.4rem;
     background: var(--gold);
-    color: var(--deep);
+    color: #ffffff;
     text-decoration: none;
     transition: all 0.3s;
-    font-weight: 400;
+    font-weight: 600;
     border-radius: 2px;
   }
   .nav-cta:hover { background: var(--accent); color: var(--parchment); }
@@ -201,7 +201,6 @@
   }
   .hero-logo {
     width: 72px; margin: 0 auto 1.6rem;
-    filter: brightness(0) invert(1);
     opacity: 0.9;
   }
   .hero-eyebrow {
@@ -1102,7 +1101,7 @@
     gap: 3rem;
   }
   .footer-logo-wrap { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
-  .footer-logo-img { width: 32px; height: 32px; object-fit: contain; opacity: 0.75; filter: brightness(0) invert(1); }
+  .footer-logo-img { width: 32px; height: 32px; object-fit: contain; opacity: 0.75; }
   .footer-brand-name {
     font-family: var(--font-serif);
     font-size: 1.2rem;
@@ -1210,7 +1209,7 @@
 <!-- NAV -->
 <nav id="main-nav">
   <a href="/" class="nav-logo">
-    <img src="/mnt/project/樺芯苑LOGO3.png" alt="樺芯苑" class="">
+    <img src="logo-gold.png" alt="樺芯苑" class="">
     <span class="nav-logo-text">樺芯苑</span>
   </a>
   <ul class="nav-links">
@@ -1246,7 +1245,7 @@
     <div class="ring"></div>
   </div>
   <div class="hero-content">
-    <img src="/mnt/project/樺芯苑LOGO3.png" alt="樺芯苑" class="hero-logo">
+    <img src="logo-gold.png" alt="樺芯苑" class="hero-logo">
     <p class="hero-eyebrow">頌缽 · 頻率 · 療癒空間</p>
     <h1>給關不掉大腦的你，<br>一場 <em>60 分鐘</em>的深層靜音</h1>
     <p class="hero-subtitle">不需練習冥想，只需躺下感受<br>為都會高壓族設計的頻率放鬆所・台北・嘉義・高雄</p>
@@ -1424,16 +1423,16 @@
         <h2 style="margin-bottom:0.2rem;">王巧慧<br><em>Cassie Wang</em></h2>
         <p class="teacher-title">樺芯苑創辦人 · 頌缽療癒師</p>
         <p class="teacher-bio">
-          師承尼泊爾國寶級大師 桑塔大師（Santosh Kumar），親赴原產地接受最正統的喜馬拉雅頌缽療癒訓練。回台後以三年深耕超過百位個案，讓都會高壓族在一次 60 分鐘的頌缽聲波中，真正體驗到深層放鬆的可能。
+          師承尼泊爾國寶級大師 桑塔大師（Santa Ratna Shakya），接受最正統的喜馬拉雅頌缽療癒訓練。三年深耕超過百位個案，讓都會高壓族在一次 60 分鐘的頌缽聲波中，真正體驗到深層放鬆的可能。
         </p>
         <div class="teacher-creds">
           <div class="cred-item">
             <span class="cred-icon">🏔</span>
-            <span>師承尼泊爾國寶大師桑塔・親赴加德滿都受訓</span>
+            <span>師承尼泊爾國寶大師桑塔・親赴加德滿都進修</span>
           </div>
           <div class="cred-item">
             <span class="cred-icon">🎓</span>
-            <span>喜馬拉雅頌缽療癒師認證・七脈輪頻率調頻訓練</span>
+            <span>尼泊爾頌缽協會認證・七脈輪頻率調頻訓練</span>
           </div>
           <div class="cred-item">
             <span class="cred-icon">✦</span>
@@ -1441,7 +1440,7 @@
           </div>
           <div class="cred-item">
             <span class="cred-icon">🌿</span>
-            <span>KUSU HANDMADE & wacca 精油品牌台灣授權代理</span>
+            <span>KUSU HANDMADE精油品牌台灣總代理</span>
           </div>
         </div>
         <a href="https://soulvibetw.com/booking" class="btn-primary">預約與 Cassie 的療癒時光</a>
@@ -1502,6 +1501,14 @@
             </div>
             <div class="freq-row">
               <span class="freq-sublabel" style="padding-left:76px;margin-left:1rem;width:100%;">深層放鬆・直覺・深睡邊界</span>
+            </div>
+            <div class="freq-row" style="margin-top:0.3rem;">
+              <span class="freq-label">Delta 波</span>
+              <div class="freq-bar-wrap"><div class="freq-bar delta" style="width: 12%; background: rgba(80,120,180,0.85);"></div></div>
+              <span class="freq-val">0.5–4Hz</span>
+            </div>
+            <div class="freq-row">
+              <span class="freq-sublabel" style="padding-left:76px;margin-left:1rem;width:100%;">無意識・深層睡眠・細胞修復</span>
             </div>
           </div>
           <p class="freq-note">頌缽聲波的物理頻率可引導腦波從 Beta 自然過渡至 Alpha / Theta 狀態，無需練習，只需傾聽。</p>
@@ -1616,7 +1623,7 @@
           </div>
           <div class="loc-info-row">
             <span class="loc-info-icon">🕐</span>
-            <span>週二至週日 10:00–21:00</span>
+            <span>預約制</span>
           </div>
         </div>
         <a href="https://soulvibetw.com/booking?location=taipei" class="btn-primary" style="display:block;text-align:center;font-size:0.78rem;padding:0.85rem;">選擇台北館預約</a>
@@ -1654,7 +1661,7 @@
           </div>
           <div class="loc-info-row">
             <span class="loc-info-icon">🕐</span>
-            <span>週二至週日 10:00–20:00</span>
+            <span>週一至周日 9:00-17:00</span>
           </div>
         </div>
         <a href="https://soulvibetw.com/booking?location=kaohsiung" class="btn-primary" style="display:block;text-align:center;font-size:0.78rem;padding:0.85rem;">選擇高雄館預約</a>
@@ -1683,7 +1690,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-logo-wrap">
-        <img src="/mnt/project/樺芯苑LOGO3.png" alt="樺芯苑" class="footer-logo-img">
+        <img src="logo-gold.png" alt="樺芯苑" class="footer-logo-img">
         <span class="footer-brand-name">樺芯苑</span>
       </div>
       <p class="footer-brand-tagline">專為都會高壓族設計的<br>大腦離線與身心重啟空間<br><br>台北・嘉義・高雄</p>
