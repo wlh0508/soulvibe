@@ -1,39 +1,41 @@
 export default function Footer() {
   return (
-    <footer className="bg-black py-32 px-[5vw] border-t-4 border-[#b38728]">
-      <div className="footer-inner">
-        <div>
-          <span className="footer-brand-name text-gold-metallic text-5xl mb-6 block">樺芯苑</span>
-          <p className="text-white/80 text-[1.3rem] font-medium leading-relaxed max-w-[400px]">
-            專為都會高壓族設計的<br />大腦離線與身心重啟空間<br /><br />
-            台北・嘉義・高雄
-          </p>
-        </div>
-        <div>
-          <h4 className="text-[#b38728] font-bold text-xl mb-10 tracking-widest uppercase">快速連結</h4>
-          <div className="footer-links">
-            <a href="#experiences">療癒體驗</a>
-            <a href="#teacher">師資介紹</a>
-            <a href="#science">科學實證</a>
-            <a href="#locations">空間據點</a>
-          </div>
-        </div>
-        <div>
-          <h4 className="text-[#b38728] font-bold text-xl mb-10 tracking-widest uppercase">聯絡我們</h4>
-          <div className="footer-links">
-            <a href="https://lin.ee/r9o68Jb" target="_blank">LINE@ 官方諮詢</a>
-            <a href="mailto:info@soulvibetw.com">電子郵件</a>
-            <p className="text-white/40 mt-10 text-sm font-bold">
-              © 2025 樺芯苑 HUAXIN YUAN.<br />All rights reserved.
+    <>
+      <footer className="py-24 px-[5vw] border-t-4 border-[#b38728]" style={{ backgroundColor: '#1a1410' }}>
+        <div className="footer-inner">
+          <div>
+            <span className="footer-brand-name">樺芯苑</span>
+            <p className="footer-tagline">
+              專為都會高壓族設計的<br />大腦離線與身心重啟空間<br /><br />
+              台北・嘉義・高雄
             </p>
           </div>
+          <div className="footer-col">
+            <h4>快速連結</h4>
+            <ul className="footer-links">
+              <li><a href="#experiences">療癒體驗</a></li>
+              <li><a href="#teacher">師資介紹</a></li>
+              <li><a href="#science">科學實證</a></li>
+              <li><a href="#locations">空間據點</a></li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>聯絡我們</h4>
+            <ul className="footer-links">
+              <li><a href="https://lin.ee/r9o68Jb" target="_blank">LINE@ 官方諮詢</a></li>
+              <li><a href="mailto:info@soulvibetw.com">電子郵件</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      
-      {/* Floating LINE Button */}
+        <div className="footer-bottom">
+          © 2025 樺芯苑 HUAXIN YUAN. All rights reserved.
+        </div>
+      </footer>
+
+      {/* Floating LINE Button — outside footer to avoid stacking context */}
       <a href="https://lin.ee/r9o68Jb" target="_blank" className="floating-line" title="LINE 預約">
-        <img src="/images/logo-gold.png" className="w-10 h-10" alt="LINE" />
+        <img src="/images/logo-gold.png" className="w-8 h-8" alt="LINE" />
       </a>
-    </footer>
+    </>
   );
 }

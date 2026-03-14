@@ -11,7 +11,7 @@ export default function Hero() {
         animate={{ scale: 1.15 }}
         transition={{ duration: 20, repeat: Infinity, repeatType: "alternate", ease: "easeInOut" }}
         className="hero-bg"
-        style={{ backgroundImage: "url('/images/LINE_ALBUM_2026126_260305_7.jpg')" }}
+        style={{ backgroundImage: "url('/images/DM3.jpg')" }}
       />
       <div className="hero-overlay"></div>
       

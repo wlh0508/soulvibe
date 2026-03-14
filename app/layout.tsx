@@ -1,5 +1,21 @@
 import type { Metadata } from "next";
+import { Noto_Serif_TC, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+
+const notoSerifTC = Noto_Serif_TC({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-serif-tc",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "樺芯苑｜都會高壓族的大腦離線空間・頌缽頻率療癒",
@@ -12,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-TW">
+    <html lang="zh-TW" className={`${notoSerifTC.variable} ${cormorant.variable}`}>
       <body>
         {children}
       </body>

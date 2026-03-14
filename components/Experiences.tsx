@@ -11,7 +11,7 @@ export default function Experiences() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
           <Reveal delay={0.1}>
             <div className="exp-card">
-              <div className="exp-card-img" style={{ backgroundImage: "url('/images/LINE_ALBUM_2026126_260305_29.jpg')" }}></div>
+              <div className="exp-card-img" style={{ backgroundImage: "url('/images/DM1.jpg')" }}></div>
               <div className="exp-card-overlay"></div>
               <div className="exp-duration">
                 <strong style={{ color: 'var(--gold)' }}>60</strong>
@@ -27,7 +27,7 @@ export default function Experiences() {
           </Reveal>
           <Reveal delay={0.2}>
             <div className="exp-card">
-              <div className="exp-card-img" style={{ backgroundImage: "url('/images/LINE_ALBUM_2026126_260305_19.jpg')" }}></div>
+              <div className="exp-card-img" style={{ backgroundImage: "url('/images/DM2.jpg')" }}></div>
               <div className="exp-card-overlay"></div>
               <div className="exp-duration">
                 <strong style={{ color: 'var(--gold)' }}>75</strong>

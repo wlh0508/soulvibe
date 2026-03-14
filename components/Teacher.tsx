@@ -7,15 +7,7 @@ export default function Teacher() {
         <div className="teacher-layout">
           <Reveal>
             <div className="teacher-visual">
-              <div className="teacher-rings">
-                <div className="ring" style={{ width: '150px', height: '150px' }}></div>
-                <div className="ring" style={{ width: '300px', height: '300px' }}></div>
-              </div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-                <div className="bowl-rim"></div>
-                <div className="bowl-body"></div>
-                <span className="text-[#b38728] mt-10 text-xl font-bold tracking-widest">✦ 頌缽療癒 ✦</span>
-              </div>
+              <img src="/images/DM5.png" alt="王巧慧 Cassie" className="teacher-photo" />
               <div className="teacher-nameplate">
                 <span className="teacher-nameplate-name">王巧慧 Cassie</span>
                 <span className="teacher-nameplate-sub">SOUND HEALING PRACTITIONER</span>
