@@ -32,7 +32,7 @@ export default function Footer() {
       
       {/* Floating LINE Button */}
       <a href="https://lin.ee/r9o68Jb" target="_blank" className="floating-line" title="LINE 預約">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" className="w-10 h-10" alt="LINE" />
+        <img src="/images/logo-gold.png" className="w-10 h-10" alt="LINE" />
       </a>
     </footer>
   );
