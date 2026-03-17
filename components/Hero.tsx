@@ -9,7 +9,7 @@ export default function Hero() {
       <motion.div 
         initial={{ scale: 1.05 }}
         animate={{ scale: 1.15 }}
-        transition={{ duration: 20, repeat: Infinity, repeatType: "alternate", ease: "easeInOut" }}
+        transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
         className="hero-bg"
         style={{ backgroundImage: "url('/images/DM3.jpg')" }}
       />
