@@ -23,7 +23,7 @@ export default function Footer() {
             <h4>聯絡我們</h4>
             <ul className="footer-links">
               <li><a href="https://lin.ee/r9o68Jb" target="_blank">LINE@ 官方諮詢</a></li>
-              <li><a href="mailto:info@soulvibetw.com">電子郵件</a></li>
+              <li><a href="mailto:soulvibetw@gmail.com">電子郵件</a></li>
             </ul>
           </div>
         </div>
