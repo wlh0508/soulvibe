@@ -1,8 +1,8 @@
 # LD.yaokun 專案開發紀錄 (Development Log)
 
-## [v1] - 2026-03-08
-### 基礎架構加固 (Infrastructure Strengthening)
-- **路徑配置**：修正 `tsconfig.json` 加入路徑別名 `@/*`。
-- **環境清理**：建立 `.gitignore` 排除暫存檔與依賴。
-- **樣式引擎**：確認 Tailwind CSS 與 PostCSS 必要組件（autoprefixer）配置完成。
-- **字體設定**：預定導入思源宋體與基礎 20px 設定。
+## [v1.1] - 2026-03-17
+### 修復部署錯誤與安全漏洞 (Deployment & Security Fix)
+- **類型修復**：修正 `Hero.tsx` 的 `framer-motion` 屬性錯誤（`alternate` -> `reverse`）。
+- **安全性更新**：將 Next.js 升級至 `15.1.12` 以修復 CVE-2025-66478 漏洞。
+- **編譯測試**：確認 `npm run build` 成功。
+
