@@ -17,7 +17,7 @@
   --font-sans: var(--font-serif-tc), 'Noto Serif TC', serif;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
 body {
   font-family: var(--font-sans);
@@ -559,6 +559,122 @@ h2 em { font-style: italic; color: var(--clay); }
     linear-gradient(rgba(139,110,82,0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(139,110,82,0.1) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+
+/* ─── TERMS PAGE ─── */
+.terms-prose h3 {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--deep);
+  letter-spacing: 0.06em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.terms-prose ul, .terms-prose ol {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.terms-prose li { line-height: 1.9; }
+.terms-prose strong { color: var(--deep); font-weight: 600; }
+.terms-toc-link {
+  color: var(--clay);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.terms-toc-link:hover { color: var(--deep-gold); }
+
+/* scroll offset for sticky nav */
+.terms-section { scroll-margin-top: 90px; }
+
+/* ─── TERMS 雙欄佈局 ─── */
+.terms-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+/* 左側 sticky TOC（桌機） */
+.terms-sidebar {
+  position: sticky;
+  top: 90px;
+}
+.terms-sidebar-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--mist);
+}
+.terms-sidebar ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.terms-sidebar li { border-bottom: 1px solid rgba(200,184,154,0.15); }
+.terms-sidebar .terms-toc-link {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* 手機折疊 TOC */
+.terms-toc-mobile {
+  display: none;
+  background: var(--parchment);
+  border-left: 3px solid var(--gold);
+  margin-bottom: 2.5rem;
+}
+.terms-toc-mobile summary {
+  list-style: none;
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  user-select: none;
+}
+.terms-toc-mobile summary::-webkit-details-marker { display: none; }
+.terms-toc-mobile summary .arrow { transition: transform 0.2s; font-size: 0.75rem; color: var(--sand); }
+.terms-toc-mobile[open] summary .arrow { transform: rotate(180deg); }
+.terms-toc-mobile ol {
+  list-style: none;
+  padding: 0 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.terms-toc-mobile li { border-top: 1px solid rgba(200,184,154,0.2); }
+.terms-toc-mobile .terms-toc-link {
+  display: block;
+  padding: 0.55rem 0;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 860px) {
+  .terms-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 680px;
+  }
+  .terms-sidebar { display: none; }
+  .terms-toc-mobile { display: block; }
 }
 
 /* ─── FOOTER ─── */

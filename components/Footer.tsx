@@ -27,8 +27,11 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="footer-bottom">
-          © 2025 樺芯苑 HUAXIN YUAN. All rights reserved.
+        <div className="footer-bottom" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
+          <span>© 2025 樺芯苑 HUAXIN YUAN. All rights reserved.</span>
+          <a href="/terms" className="footer-links" style={{ fontSize: '0.85rem', letterSpacing: '0.08em', textDecoration: 'none', color: 'rgba(201,169,110,0.5)' }}>
+            服務條款・退款政策
+          </a>
         </div>
       </footer>
 
