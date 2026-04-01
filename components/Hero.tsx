@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
 
         <h1 className="hero-main-title">
-          給關不掉大腦的你，<br />
+          給關不掉大腦的你<br />
           <em>60 分鐘</em>深層靜音
         </h1>
 

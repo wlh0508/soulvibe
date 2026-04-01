@@ -31,7 +31,7 @@ export default function Locations() {
             <span style={{ fontSize: '2rem' }}>＋</span>
             <span className="loc-city-label" style={{ letterSpacing: '0.2em' }}>MORE COMING</span>
             <h3 style={{ margin: 0 }}>陸續增加中</h3>
-            <p style={{ fontSize: '0.9rem', textAlign: 'center', margin: 0 }}>更多城市據點籌備中，<br />敬請期待</p>
+            <p style={{ fontSize: '1rem', textAlign: 'center', margin: 0 }}>更多城市據點籌備中，<br />敬請期待</p>
           </div>
         </div>
       </div>

@@ -256,7 +256,7 @@ header#hero {
   z-index: 4;
   display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
   color: rgba(245,240,232,0.65);
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   letter-spacing: 0.25em;
   animation: pulse 2.5s ease-in-out infinite;
 }
@@ -279,7 +279,7 @@ section { padding: 10rem 5vw; position: relative; overflow: hidden; }
 .section-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
 
 .section-eyebrow {
-  font-size: 1rem;
+  font-size: 1.15rem;
   letter-spacing: 0.35em;
   color: var(--accent);
   text-transform: uppercase;
@@ -340,14 +340,14 @@ h2 em { font-style: italic; color: var(--clay); }
   letter-spacing: 0.04em;
   line-height: 1.5;
 }
-.pain-card p { font-size: 0.95rem; color: var(--clay); line-height: 1.9; }
+.pain-card p { font-size: 1.1rem; color: var(--clay); line-height: 1.9; }
 
 /* ─── SOLUTION ─── */
 #solution { background: #000; color: #ffffff; }
 #solution h2 { color: var(--parchment); }
 #solution h2 em { color: var(--gold); }
 .solution-intro {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: rgba(245,240,232,0.7);
   margin-bottom: 3.5rem;
   max-width: 500px;
@@ -370,7 +370,7 @@ h2 em { font-style: italic; color: var(--clay); }
 .pillar:hover { background: rgba(45,37,30,0.98); border-color: var(--gold); }
 .pillar-num {
   font-family: var(--font-serif);
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   letter-spacing: 0.3em;
   color: var(--gold);
   margin-bottom: 1rem;
@@ -386,7 +386,7 @@ h2 em { font-style: italic; color: var(--clay); }
   line-height: 1.4;
 }
 .pillar p {
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   color: rgba(245,240,232,0.65);
   line-height: 2;
   letter-spacing: 0.04em;
@@ -401,7 +401,7 @@ h2 em { font-style: italic; color: var(--clay); }
 #video-section h2 { color: var(--parchment); }
 #video-section h2 em { color: var(--gold); }
 .video-subtitle {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: rgba(245,240,232,0.6);
   margin-bottom: 2.5rem;
   letter-spacing: 0.06em;
@@ -422,7 +422,7 @@ h2 em { font-style: italic; color: var(--clay); }
 }
 .video-caption {
   margin-top: 1.5rem;
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   color: rgba(245,240,232,0.65);
   letter-spacing: 0.15em;
 }
@@ -447,7 +447,7 @@ h2 em { font-style: italic; color: var(--clay); }
   z-index: 2;
 }
 .exp-tag {
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   letter-spacing: 0.28em;
   color: var(--gold);
   margin-bottom: 0.6rem;
@@ -463,7 +463,7 @@ h2 em { font-style: italic; color: var(--clay); }
   letter-spacing: 0.05em;
 }
 .exp-card p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: rgba(245,240,232,0.75);
   margin-bottom: 1.4rem;
   line-height: 1.9;
@@ -484,7 +484,7 @@ h2 em { font-style: italic; color: var(--clay); }
   font-weight: 300;
   line-height: 1;
 }
-.exp-duration span { font-size: 0.875rem; color: rgba(245,240,232,0.7); letter-spacing: 0.08em; }
+.exp-duration span { font-size: 1.1rem; color: rgba(245,240,232,0.7); letter-spacing: 0.08em; }
 
 /* ─── TEACHER ─── */
 #teacher { background: var(--parchment); }
@@ -544,7 +544,7 @@ h2 em { font-style: italic; color: var(--clay); }
   margin-bottom: 0.3rem;
 }
 .teacher-nameplate-sub {
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   color: var(--gold);
   letter-spacing: 0.28em;
 }
@@ -558,13 +558,13 @@ h2 em { font-style: italic; color: var(--clay); }
   letter-spacing: 0.06em;
 }
 .teacher-title {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   color: var(--accent);
   letter-spacing: 0.22em;
   margin-bottom: 1.8rem;
 }
 .teacher-bio {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--clay);
   line-height: 2;
   margin-bottom: 2rem;
@@ -576,7 +576,7 @@ h2 em { font-style: italic; color: var(--clay); }
 }
 .cred-item {
   display: flex; align-items: flex-start; gap: 0.8rem;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--deep);
   line-height: 1.6;
 }
@@ -590,7 +590,7 @@ h2 em { font-style: italic; color: var(--clay); }
   align-items: start;
 }
 .science-text p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--clay);
   line-height: 2;
   margin-bottom: 1.5rem;
@@ -601,7 +601,7 @@ h2 em { font-style: italic; color: var(--clay); }
   padding: 2.5rem;
 }
 .freq-title {
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   letter-spacing: 0.25em;
   color: var(--gold);
   margin-bottom: 2rem;
@@ -611,7 +611,7 @@ h2 em { font-style: italic; color: var(--clay); }
 .freq-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .freq-label {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   color: var(--parchment);
   width: 76px;
   flex-shrink: 0;
@@ -630,8 +630,8 @@ h2 em { font-style: italic; color: var(--clay); }
 .freq-bar.alpha { width: 58%; background: rgba(201,169,110,0.85); }
 .freq-bar.theta { width: 32%; background: rgba(100,160,140,0.85); }
 .freq-bar.delta { width: 12%; background: rgba(69,183,209,0.85); }
-.freq-val { font-size: 0.875rem; color: rgba(245,240,232,0.7); letter-spacing: 0.08em; width: 64px; text-align: right; flex-shrink: 0; }
-.freq-sublabel { font-size: 0.875rem; color: rgba(245,240,232,0.7); letter-spacing: 0.06em; width: 100%; padding-left: 86px; margin-top: -0.8rem; }
+.freq-val { font-size: 1.1rem; color: rgba(245,240,232,0.7); letter-spacing: 0.08em; width: 64px; text-align: right; flex-shrink: 0; }
+.freq-sublabel { font-size: 1.1rem; color: rgba(245,240,232,0.7); letter-spacing: 0.06em; width: 100%; padding-left: 86px; margin-top: -0.8rem; }
 
 /* ─── TESTIMONIALS ─── */
 #testimonials { background: var(--parchment); }
@@ -659,12 +659,12 @@ h2 em { font-style: italic; color: var(--clay); }
 }
 .review-stars {
   color: var(--gold);
-  font-size: 1rem;
+  font-size: 1.15rem;
   letter-spacing: 0.1em;
 }
 .review-quote {
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--deep);
   line-height: 1.9;
   letter-spacing: 0.04em;
@@ -692,13 +692,13 @@ h2 em { font-style: italic; color: var(--clay); }
   flex-shrink: 0;
 }
 .review-name {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--deep);
   letter-spacing: 0.05em;
 }
 .review-meta {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   color: var(--clay);
   letter-spacing: 0.04em;
   margin-top: 0.2rem;
@@ -731,7 +731,7 @@ h2 em { font-style: italic; color: var(--clay); }
 }
 .location-card:hover { transform: translateY(-4px); }
 .location-card:hover::after { transform: scaleX(1); }
-.loc-city-label { font-size: 0.875rem; letter-spacing: 0.3em; color: var(--accent); margin-bottom: 0.7rem; display: block; }
+.loc-city-label { font-size: 1.1rem; letter-spacing: 0.3em; color: var(--accent); margin-bottom: 0.7rem; display: block; }
 .location-card h3 {
   font-family: var(--font-serif);
   font-size: 1.5rem;
@@ -743,7 +743,7 @@ h2 em { font-style: italic; color: var(--clay); }
 .loc-info { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
 .loc-info-row {
   display: flex; align-items: flex-start; gap: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--clay);
   letter-spacing: 0.03em;
   line-height: 1.7;
@@ -800,7 +800,7 @@ h2 em { font-style: italic; color: var(--clay); }
   top: 90px;
 }
 .terms-sidebar-label {
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   letter-spacing: 0.3em;
   color: var(--accent);
   font-weight: 700;
@@ -820,7 +820,7 @@ h2 em { font-style: italic; color: var(--clay); }
 .terms-sidebar .terms-toc-link {
   display: block;
   padding: 0.5rem 0;
-  font-size: 0.82rem;
+  font-size: 1.15rem;
   line-height: 1.5;
 }
 
@@ -838,7 +838,7 @@ h2 em { font-style: italic; color: var(--clay); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.8rem;
+  font-size: 1.15rem;
   letter-spacing: 0.2em;
   color: var(--accent);
   font-weight: 700;
@@ -846,7 +846,7 @@ h2 em { font-style: italic; color: var(--clay); }
   user-select: none;
 }
 .terms-toc-mobile summary::-webkit-details-marker { display: none; }
-.terms-toc-mobile summary .arrow { transition: transform 0.2s; font-size: 0.875rem; color: var(--sand); }
+.terms-toc-mobile summary .arrow { transition: transform 0.2s; font-size: 1.1rem; color: var(--sand); }
 .terms-toc-mobile[open] summary .arrow { transform: rotate(180deg); }
 .terms-toc-mobile ol {
   list-style: none;
@@ -859,7 +859,7 @@ h2 em { font-style: italic; color: var(--clay); }
 .terms-toc-mobile .terms-toc-link {
   display: block;
   padding: 0.55rem 0;
-  font-size: 0.88rem;
+  font-size: 1.1rem;
 }
 
 @media (max-width: 860px) {
@@ -899,7 +899,7 @@ h2 em { font-style: italic; color: var(--clay); }
   max-width: 360px;
 }
 .footer-col h4 {
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   letter-spacing: 0.28em;
   color: var(--gold);
   margin-bottom: 1.4rem;
@@ -912,7 +912,7 @@ h2 em { font-style: italic; color: var(--clay); }
   display: flex; flex-direction: column; gap: 0.8rem;
 }
 .footer-links a {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: rgba(201,169,110,0.6);
   text-decoration: none;
   letter-spacing: 0.05em;
@@ -924,7 +924,7 @@ h2 em { font-style: italic; color: var(--clay); }
   max-width: 1100px; margin: 2.5rem auto 0;
   border-top: 1px solid rgba(201,169,110,0.15);
   padding-top: 1.5rem;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   color: rgba(201,169,110,0.65);
   letter-spacing: 0.08em;
 }
@@ -952,7 +952,7 @@ h2 em { font-style: italic; color: var(--clay); }
   background: var(--gold);
   color: var(--deep);
   padding: 0.95rem 2.5rem;
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   letter-spacing: 0.18em;
   font-weight: 600;
   text-decoration: none;
@@ -995,6 +995,6 @@ h2 em { font-style: italic; color: var(--clay); }
   .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
   .hero-content h1 { font-size: 2rem; }
   .hero-logo { width: 120px; }
-  .sticky-cta { font-size: 0.85rem; padding: 0.9rem 1.8rem; }
+  .sticky-cta { font-size: 1.1rem; padding: 0.9rem 1.8rem; }
   .freq-sublabel { padding-left: 0; }
 }
