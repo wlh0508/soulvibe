@@ -6,6 +6,7 @@ import VideoSection from "@/components/VideoSection";
 import Experiences from "@/components/Experiences";
 import Teacher from "@/components/Teacher";
 import Science from "@/components/Science";
+import Testimonials from "@/components/Testimonials";
 import Locations from "@/components/Locations";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Experiences />
       <Teacher />
       <Science />
+      <Testimonials />
       <Locations />
       <Footer />
       
