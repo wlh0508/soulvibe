@@ -26,7 +26,7 @@ export default function Home() {
       <Footer />
       
       {/* Sticky CTA (Mobile-optimized) */}
-      <a href="https://soulvibetw.com/booking" className="sticky-cta">
+      <a href="https://shop.soulvibetw.com/booking" className="sticky-cta">
         📅 立即預約療癒體驗
       </a>
     </main>
