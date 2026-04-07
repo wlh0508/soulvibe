@@ -39,7 +39,7 @@ export default function Hero() {
         </p>
 
         <div className="hero-cta-row">
-          <a href="https://shop.soulvibetw.com/booking" className="btn-primary">立即預約體驗</a>
+          <a href="https://shop.soulvibetw.com" className="btn-primary">立即預約體驗</a>
           <a href="#experiences" className="btn-outline-gold">了解體驗內容</a>
         </div>
 

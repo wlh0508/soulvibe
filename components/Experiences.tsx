@@ -21,7 +21,7 @@ export default function Experiences() {
                 <span className="exp-tag">SOUND HEALING</span>
                 <h3>深度頌缽<br />靜音體驗</h3>
                 <p>尼泊爾手工缽的純粹音波，共振你的每一個細胞。讓大腦從 Beta 波自動沉入 Delta 的安靜海洋。</p>
-                <a href="https://shop.soulvibetw.com/booking" className="btn-primary">立即預約體驗</a>
+                <a href="https://shop.soulvibetw.com" className="btn-primary">立即預約體驗</a>
               </div>
             </div>
           </Reveal>
@@ -37,7 +37,7 @@ export default function Experiences() {
                 <span className="exp-tag">DEEP HEALING</span>
                 <h3>頌缽繞場<br />深層療癒</h3>
                 <p>療癒師透過繞場共振，深入釋放積累已久的緊繃與阻滯能量。</p>
-                <a href="https://shop.soulvibetw.com/booking" className="btn-primary">立即預約體驗</a>
+                <a href="https://shop.soulvibetw.com" className="btn-primary">立即預約體驗</a>
               </div>
             </div>
           </Reveal>
