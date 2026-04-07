@@ -127,7 +127,7 @@ export default function TermsPage() {
               <p>本品牌提供之頌缽療癒服務包含：一對一個人療癒、小團體工作坊、頌缽課程培訓，以及其他不定期推出之主題體驗。</p>
               <h3>2.1 預約方式</h3>
               <ul>
-                <li>透過本網站預約頁面（soulvibetw.com/booking）</li>
+                <li>透過本網站預約頁面（shop.soulvibetw.com/booking）</li>
                 <li>透過 LINE 官方帳號（@lin.ee/r9o68Jb）傳訊預約</li>
                 <li>電話或 Email 聯繫本品牌後台確認</li>
               </ul>

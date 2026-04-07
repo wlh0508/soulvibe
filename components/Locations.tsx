@@ -2,9 +2,9 @@ import Reveal from "./Reveal";
 
 export default function Locations() {
   const locs = [
-    { city: "TAIPEI ／ 台北", name: "台北館", addr: "迴咖啡・捷運民權西路站", time: "預約制", booking: "https://soulvibetw.com/booking?location=taipei" },
-    { city: "CHIAYI ／ 嘉義", name: "嘉義館", addr: "嘉義市東區・蘭井街 342 號", time: "週二至週日 10:00–20:00", booking: "https://soulvibetw.com/booking?location=chiayi" },
-    { city: "KAOHSIUNG ／ 高雄", name: "高雄館", addr: "橋頭區・捷運橋頭糖廠站", time: "週一至周日 9:00-17:00", booking: "https://soulvibetw.com/booking?location=kaohsiung" },
+    { city: "TAIPEI ／ 台北", name: "台北館", addr: "迴咖啡・捷運民權西路站", time: "預約制", booking: "https://shop.soulvibetw.com/booking?location=taipei" },
+    { city: "CHIAYI ／ 嘉義", name: "嘉義館", addr: "嘉義市東區・蘭井街 342 號", time: "週二至週日 10:00–20:00", booking: "https://shop.soulvibetw.com/booking?location=chiayi" },
+    { city: "KAOHSIUNG ／ 高雄", name: "高雄館", addr: "橋頭區・捷運橋頭糖廠站", time: "週一至周日 9:00-17:00", booking: "https://shop.soulvibetw.com/booking?location=kaohsiung" },
   ];
 
   return (

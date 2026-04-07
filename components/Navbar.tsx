@@ -33,7 +33,7 @@ export default function Navbar() {
             <li key={link.name}><a href={link.href}>{link.name}</a></li>
           ))}
         </ul>
-        <a href="https://soulvibetw.com/booking" className="nav-cta">立即預約</a>
+        <a href="https://shop.soulvibetw.com/booking" className="nav-cta">立即預約</a>
         <div className="nav-hamburger" id="hamburger" onClick={() => setIsMenuOpen(true)}>
           <span></span><span></span><span></span>
         </div>
@@ -48,7 +48,7 @@ export default function Navbar() {
           </a>
         ))}
         <a 
-          href="https://soulvibetw.com/booking" 
+          href="https://shop.soulvibetw.com/booking" 
           className="btn-primary" 
           style={{ marginTop: '1rem', color: '#000000', backgroundColor: 'var(--gold)' }} 
           onClick={() => setIsMenuOpen(false)}

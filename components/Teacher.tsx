@@ -27,7 +27,7 @@ export default function Teacher() {
                 <div className="cred-item">🎓 尼泊爾頌缽協會認證・七脈輪頻率調頻訓練</div>
                 <div className="cred-item">🌿 KUSU HANDMADE精油品牌台灣總代理</div>
               </div>
-              <a href="https://soulvibetw.com/booking" className="btn-primary">預約與 Cassie 的療癒時光</a>
+              <a href="https://shop.soulvibetw.com/booking" className="btn-primary">預約與 Cassie 的療癒時光</a>
             </Reveal>
           </div>
         </div>
